@@ -1,0 +1,17 @@
+# vim
+export EDITOR=vim
+export VISUAL=vim
+
+# GOPATH
+GOPATH=$HOME/go
+export GOPATH
+
+# paths
+PATH=$HOME/bin:$PATH
+PATH=$GOPATH/bin:$PATH
+PATH=$HOME/workspace/dev_scripts/docker/bin:$PATH
+PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH
+
+# rbenv
+eval "$(rbenv init -)"

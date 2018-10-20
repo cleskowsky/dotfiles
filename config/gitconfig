@@ -1,0 +1,24 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Christian Leskowsky
+	email = christian@leskowsky.net
+
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  br = branch
+  mg = merge --no-ff
+  lo = log --graph
+  undo = reset --hard
+  hist = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  amend = commit --amend
+  subup = submodule update --init --recursive
+[core]
+	excludesfile = /Users/christian/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
