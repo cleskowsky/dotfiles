@@ -3,7 +3,7 @@ export EDITOR=vim
 export VISUAL=vim
 
 # GOPATH
-GOPATH=$HOME/go
+GOPATH=$HOME
 export GOPATH
 
 # paths
