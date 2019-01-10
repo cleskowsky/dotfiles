@@ -12,6 +12,8 @@ call plug#end()
 set number
 set ignorecase
 set smartcase
+set nobackup
+set noswapfile
 
 " Colorscheme
 syntax enable
