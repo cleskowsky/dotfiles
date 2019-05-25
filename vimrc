@@ -14,6 +14,9 @@ set ignorecase
 set smartcase
 set nobackup
 set noswapfile
+set expandtab
+set tabstop=2
+set shiftwidth=2
 
 " Colorscheme
 syntax enable
@@ -47,3 +50,4 @@ endif
 " vim-go
 let g:go_fmt_command = "goimports"
 
+let g:ctrlp_working_path_mode = 'w'

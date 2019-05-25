@@ -15,3 +15,10 @@ export PATH
 
 # rbenv
 eval "$(rbenv init -)"
+
+# vagrant
+alias vs="vagrant status"
+alias vu="vagrant up"
+alias vh="vagrant halt"
+alias vd="vagrant destroy"
+
