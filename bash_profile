@@ -51,10 +51,5 @@ export PS1
 EDITOR=vim
 export EDITOR
 
-test -f $HOME/.bash_profile.after && source $HOME/.bash_profile.after
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/christian/google-cloud-sdk/path.bash.inc' ]; then source '/Users/christian/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/christian/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/christian/google-cloud-sdk/completion.bash.inc'; fi
+# Add Valet to my path
+export PATH="~/.composer/vendor/bin:$PATH"
