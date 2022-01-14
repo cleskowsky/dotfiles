@@ -18,3 +18,9 @@ set backspace=indent,eol,start
 let mapleader = ","
 
 nnoremap <leader>n :NERDTreeToggle<CR>
+
+" Change buffers with Ctrl+j|k|l|h
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
