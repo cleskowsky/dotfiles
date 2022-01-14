@@ -12,8 +12,8 @@ call plug#end()
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set hlsearch
 set incsearch
+set backspace=indent,eol,start
 
 let mapleader = ","
 
