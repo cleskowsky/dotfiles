@@ -1,6 +1,20 @@
 brew install wget \
   pstree \
   the_silver_searcher \
-  ansible
+  ansible \
+  bat \
+  git \
+  terraform \
+  tflint
 
-brew cask install iterm2
+brew install --cask iterm2 \
+  alfred \
+  google-chrome \
+  vlc \
+  zoom \
+  slack \
+  docker \
+  discord \
+  jetbrains-toolbox \
+  sublime-text
+
