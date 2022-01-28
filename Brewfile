@@ -6,6 +6,8 @@ brew 'bat'
 brew 'git'
 brew 'terraform'
 brew 'tflint'
+brew 'visual-studio-code'
+
 cask 'iterm2'
 cask 'alfred'
 cask 'google-chrome'
