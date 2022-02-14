@@ -14,6 +14,8 @@ set shiftwidth=2
 set expandtab
 set incsearch
 set backspace=indent,eol,start
+set ignorecase
+set smartcase
 
 let mapleader = ","
 
