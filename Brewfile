@@ -7,6 +7,8 @@ brew 'git'
 brew 'terraform'
 brew 'tflint'
 brew 'visual-studio-code'
+brew 'watch'
+brew 'httpie'
 
 cask 'iterm2'
 cask 'alfred'
