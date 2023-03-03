@@ -10,3 +10,9 @@ ln -s $DOTFILES/kitty $HOME/.config/kitty
 
 rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvim $HOME/.config/nvim
+
+rm -rf $HOME/.zshrc
+ln -s $DOTFILES/zshrc $HOME/.zshrc
+
+rm -rf $HOME/.gitconfig
+ln -s $DOTFILES/gitconfig $HOME/.gitconfig
