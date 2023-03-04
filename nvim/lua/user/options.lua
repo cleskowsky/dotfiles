@@ -15,8 +15,6 @@ vim.opt.title = true
 
 vim.opt.termguicolors = true
 
-vim.opt.spell = true
-
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
