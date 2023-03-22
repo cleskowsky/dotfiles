@@ -8,5 +8,4 @@ alias p='cd ~/workspace/infra/terraform/environments/perf'
 alias i='cd ~/workspace/infra'
 
 export HOMEBREW_NO_AUTO_UPDATE=1
-export PATH="/usr/local/opt/mongodb-community@4.2/bin:$PATH"
-export PATH="$HOME/bin:$PATH"
+export PATH="/usr/local/opt/mongodb-community@4.2/bin:/opt/homebrew/opt/mongodb-community@4.2/bin:$HOME/bin:$PATH"
