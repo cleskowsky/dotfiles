@@ -9,3 +9,4 @@ alias i='cd ~/workspace/infra'
 
 export HOMEBREW_NO_AUTO_UPDATE=1
 export PATH="/usr/local/opt/mongodb-community@4.2/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
