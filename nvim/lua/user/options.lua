@@ -28,7 +28,7 @@ vim.opt.splitright = true
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 
-vim.opt.clipboard = 'unnamedplus' -- Use system clipboard
+-- vim.opt.clipboard = 'unnamedplus' -- Use system clipboard
 
 vim.opt.confirm = true
 

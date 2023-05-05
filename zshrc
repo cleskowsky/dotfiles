@@ -3,7 +3,7 @@ alias b='cd ..'
 alias lsa='ls -la'
 alias vim='nvim'
 alias s='kitty +kitten ssh'
-alias cr='vim ~/.aws/credentials'
+alias cr='subl ~/.aws/credentials'
 alias p='cd ~/workspace/infra/terraform/environments/perf'
 alias i='cd ~/workspace/infra'
 
