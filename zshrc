@@ -5,7 +5,8 @@ alias vim='nvim'
 alias cr='subl ~/.aws/credentials'
 alias p='cd ~/workspace/infra/terraform/environments/perf'
 alias i='cd ~/workspace/infra'
+alias ans='cd ~/workspace/ans'
 
 export HOMEBREW_NO_AUTO_UPDATE=1
-export PATH="/usr/local/opt/mongodb-community@4.2/bin:/opt/homebrew/opt/mongodb-community@4.2/bin:$HOME/bin:$PATH"
+export PATH="$HOME/bin:$HOME/workspace/infra/scripts:$PATH"
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
