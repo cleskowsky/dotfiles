@@ -10,3 +10,6 @@ alias ans='cd ~/workspace/ans'
 export HOMEBREW_NO_AUTO_UPDATE=1
 export PATH="$HOME/bin:$HOME/workspace/infra/scripts:$PATH"
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+export PATH="/Applications/IntelliJ IDEA.app/Contents/MacOS:$PATH"
+
+export EDITOR='subl -w'
