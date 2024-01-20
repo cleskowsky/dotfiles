@@ -13,3 +13,5 @@ export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH="/Applications/IntelliJ IDEA.app/Contents/MacOS:$PATH"
 
 export EDITOR='subl -w'
+
+alias m='cd ~/workspace/Ocean && docker-compose exec mongo mongo ocean'
