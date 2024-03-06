@@ -15,3 +15,6 @@ export PATH="/Applications/IntelliJ IDEA.app/Contents/MacOS:$PATH"
 export EDITOR='subl -w'
 
 alias m='cd ~/workspace/Ocean && docker-compose exec mongo mongo ocean'
+alias m1='cd ~/workspace/Ocean && docker-compose exec mongo-1 mongo ocean'
+alias m2='cd ~/workspace/Ocean && docker-compose exec mongo-2 mongo ocean'
+alias a='source ~/workspace/ansible/bin/activate'
