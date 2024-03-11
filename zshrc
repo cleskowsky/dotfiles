@@ -17,3 +17,5 @@ export EDITOR='subl -w'
 alias m="cd ~/workspace/Ocean && docker-compose exec mongo mongo --host 'mongodb://localhost/ocean?replicaSet=rs0&ssl=false'"
 alias m1='cd ~/workspace/Ocean && docker-compose exec mongo-1 mongo ocean'
 alias a='source ~/workspace/ansible/bin/activate'
+
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
