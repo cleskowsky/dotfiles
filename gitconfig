@@ -13,3 +13,5 @@
 	autocrlf = input
 [pull]
 	rebase = false
+[commit]
+	template = ~/.gitmessage
