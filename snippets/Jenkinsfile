@@ -1,0 +1,40 @@
+pipeline {
+    agent any
+
+    options {
+        // https://www.jenkins.io/doc/book/pipeline/syntax/#options
+    }
+
+    environment {
+        // https://www.jenkins.io/doc/book/pipeline/syntax/#environment
+    }
+
+    parameters {
+        string(name: 'reason', description: 'Tell us what you are doing')
+    }
+
+    triggers {
+        // https://www.jenkins.io/doc/book/pipeline/syntax/#triggers
+        cron('@hourly')
+    }
+
+    stages {
+        stage('Code') {
+            steps {
+                // https://www.jenkins.io/doc/book/pipeline/syntax/#steps
+            }
+        }
+
+        stage('Build') {
+            steps {}
+        }
+
+        stage('Test') {
+            steps {}
+        }
+
+        stage('Deploy') {
+            steps {}
+        }
+    }
+}

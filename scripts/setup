@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+echo 'Creating ~/bin dir'
+mkdir -p ~/bin
+cp scripts/* ~/bin
+
+echo 'Creating symlinks for config files and directories'
+rm ~/.snippets
+ln -s `pwd`/snippets ~/.snippets
