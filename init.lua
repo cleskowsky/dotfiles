@@ -13,11 +13,85 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-	-- colorscheme
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 }
+
+  -- file explorer
+  {
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      require("nvim-tree").setup({
+        sort_by = "case_sensitive",
+        filters = {
+          dotfiles = true,
+        },
+        on_attach = function(bufnr)
+          local api = require('nvim-tree.api')
+
+          local function opts(desc)
+            return {
+              desc = 'nvim-tree: ' .. desc,
+              buffer = bufnr,
+              noremap = true,
+              silent = true,
+              nowait = true,
+            }
+          end
+
+          api.config.mappings.default_on_attach(bufnr)
+
+          vim.keymap.set('n', 's', api.node.open.vertical, opts('Open: Vertical Split'))
+          vim.keymap.set('n', 'i', api.node.open.horizontal, opts('Open: Horizontal Split'))
+          vim.keymap.set('n', 'u', api.tree.change_root_to_parent, opts('Up'))
+        end
+      })
+    end,
+  },
+
+  -- fzf extension for telescope with better speed
+  {
+    "nvim-telescope/telescope-fzf-native.nvim", build = 'make' 
+  },
+
+  {'nvim-telescope/telescope-ui-select.nvim' },
+
+  -- fuzzy finder framework
+  {
+    "nvim-telescope/telescope.nvim", 
+    tag = '0.1.4',
+    dependencies = { 
+      "nvim-lua/plenary.nvim" ,
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function ()
+      require("telescope").setup({
+        extensions = {
+          fzf = {
+            fuzzy = true,                    -- false will only do exact matching
+            override_generic_sorter = true,  -- override the generic sorter
+            override_file_sorter = true,     -- override the file sorter
+            case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+                                             -- the default case_mode is "smart_case"
+          }
+        }
+      })
+
+      -- To get fzf loaded and working with telescope, you need to call
+      -- load_extension, somewhere after setup function:
+      require('telescope').load_extension('fzf')
+
+      -- To get ui-select loaded and working with telescope, you need to call
+      -- load_extension, somewhere after setup function:
+      require("telescope").load_extension("ui-select")
+    end,
+  }
 })
 
 -- Other vim options
+vim.o.background = "dark"
+vim.cmd [[colorscheme habamax]]
+
 vim.opt.termguicolors = true
 
 vim.opt.number = true        -- Show line numbers
@@ -67,3 +141,16 @@ vim.keymap.set('', '<C-l>', '<C-W>l')
 
 -- Yanking a line should act like D and C
 vim.keymap.set('n', 'Y', 'y$')
+
+-- File-tree mappings
+vim.keymap.set('n', '<leader>n', ':NvimTreeToggle<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>f', ':NvimTreeFindFile!<CR>', { noremap = true })
+
+-- telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+vim.keymap.set('n', '<C-o>', builtin.find_files, {})
+vim.keymap.set('n', '<C-g>', builtin.lsp_document_symbols, {})
+vim.keymap.set('n', '<leader>td', builtin.diagnostics, {})
+vim.keymap.set('n', '<leader>gs', builtin.grep_string, {})
+vim.keymap.set('n', '<leader>gg', builtin.live_grep, {})
