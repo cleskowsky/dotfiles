@@ -6,4 +6,5 @@ brew 'watch'
 brew 'httpie'
 brew 'neovim'
 brew 'telnet'
-cask 'vlc'
+cask 'vlc', force_auto_update: true
+cask 'font-jetbrains-mono-nerd-font'
